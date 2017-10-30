@@ -5,7 +5,7 @@
     <session-factory>
         <!--dodavanje podesavanja za bazu: url, username, password...-->
         <property name="hibernate.connection.url">
-            jdbc:mysql://127.0.0.1:3306/it355?useUnicode=true&amp;connectionCollation=utf8_bin&amp;characterSetResults=utf8&amp;characterEncoding=utf-8"</property>
+            jdbc:mysql://127.0.0.1:3306/it355april?useUnicode=true&amp;connectionCollation=utf8_bin&amp;characterSetResults=utf8&amp;characterEncoding=utf-8"</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password"></property>
         <property name="hibernate.connection.pool_size">10</property>

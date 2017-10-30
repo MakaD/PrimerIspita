@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="PrimerIspita" />
+        <module name="April" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="PrimerIspita" target="1.7" />
+      <module name="April" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
