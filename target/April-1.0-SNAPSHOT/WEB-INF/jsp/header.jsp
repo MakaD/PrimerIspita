@@ -50,11 +50,13 @@
                             <c:url var="index"  value="/" />
                             <c:url var="add_grad"  value="/add_grad" />
                             <c:url var="add_proizvodjac"  value="/add_proizvodjac" />
+                            <c:url var="list_namestaj"  value="/list_namestaj" />
                             <c:url var="add_namestaj"  value="/add_namestaj" />
                             <c:url var="add_korisnik"  value="/add_korisnik" />
                             <li class="<%=  (pageName.equals("index.jsp")) ? "active" : ""%>"><a href="${index}">Index</a></li>
                             <li class="<%=  (pageName.equals("add_grad.jsp")) ? "active" : ""%>"><a href="${add_grad}">Dodaj grad</a></li>
                             <li class="<%=  (pageName.equals("add_proizvodjac.jsp")) ? "active" : ""%>"><a href="${add_proizvodjac}">Dodaj proizvodjaca</a></li>
+                            <li class="<%=  (pageName.equals("list_namestaj.jsp")) ? "active" : ""%>"><a href="${list_namestaj}">Lista namestaja</a></li>
                             <li class="<%=  (pageName.equals("add_namestaj.jsp")) ? "active" : ""%>"><a href="${add_namestaj}">Dodaj namestaj</a></li>
                             <li class="<%=  (pageName.equals("add_korisnik.jsp")) ? "active" : ""%>"><a href="${add_korisnik}">Dodaj korisnika</a></li>
 

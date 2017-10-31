@@ -5,17 +5,14 @@
  */
 package com.it355.april.controller;
 
-import com.it355.april.dao.KorisnikDao;
-import com.it355.april.dao.NamestajDao;
-import com.it355.april.dao.ProizvodjacDao;
-import com.it355.april.entity.Namestaj;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
-import java.util.List;
+import java.security.Principal;
+
 
 /**
  *
@@ -28,6 +25,25 @@ public class MainController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(Model model) {
         return "index";
+    }
+
+    // for 403 access denied page
+    @RequestMapping(value = "/403", method = RequestMethod.GET)
+    public ModelAndView accesssDenied(Principal user) {
+
+        ModelAndView model = new ModelAndView();
+
+        if (user != null) {
+            model.addObject("msg", "Hi " + user.getName()
+                    + ", you do not have permission to access this page!");
+        } else {
+            model.addObject("msg",
+                    "You do not have permission to access this page!");
+        }
+
+        model.setViewName("403");
+        return model;
+
     }
 
 }

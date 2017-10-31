@@ -62,8 +62,6 @@ public class NamestajController {
         return "add_namestaj";
     }
 
-
-
     @RequestMapping(value = "/delete_namestaj/{id}", method = RequestMethod.GET)
     public String deleteProizvodjac(@PathVariable("id") int id, HttpServletRequest request) {
         Namestaj namestaj = namestajDao.getNamestajById(id);
@@ -74,6 +72,18 @@ public class NamestajController {
         namestajDao.deleteNamestaj(namestaj);
         String referer = request.getHeader("Referer");
         return "redirect:" + referer;
+    }
+
+    @RequestMapping(value = "/list_namestaj", method = RequestMethod.GET)
+    public String listNamestaj(Model model) {
+        model.addAttribute("namestaj", new Namestaj());
+        List namestaji = namestajDao.getListaNamestaja();
+        model.addAttribute("namestaji", namestaji);
+        List proizvodjaci = proizvodjacDao.getListaProizvodjaca();
+        model.addAttribute("proizvodjaci", proizvodjaci);
+        List korisnici = korisnikDao.getListaKorisnika();
+        model.addAttribute("korisnici", korisnici);
+        return "list_namestaj";
     }
 
 }
